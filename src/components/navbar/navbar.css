@@ -1,0 +1,12 @@
+.header {
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    height: 50px;
+    align-items: center;
+}
+
+.navbar__element{
+    color:chartreuse;
+    text-decoration: none;
+}
