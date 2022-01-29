@@ -1,13 +1,13 @@
 import React from 'react';
 import "./navbar.css";
-import { Routes ,Route ,Link } from "react-router-dom";
+import {BrowserRouter as Router, Routes ,Route ,Link } from "react-router-dom";
 import Home from '../home';
 import Componente from '../componente';
 import Form from '../form';
 
 const Navbar = (props) => {
   return(
-    <>
+    <Router>
       <div className="header">
         <Link className="navbar__element" to="/" >Inicio</Link>
         <Link className="navbar__element" to="/contact" >Contacto</Link>
@@ -24,7 +24,7 @@ const Navbar = (props) => {
         </Route>
 
       </Routes>
-    </>
+      </Router>
   )
   
 };
