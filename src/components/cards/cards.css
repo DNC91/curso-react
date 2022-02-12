@@ -1,5 +1,9 @@
+.big__container {
+    background-color: brown;
+}
+
 .card__container {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    background-color: brown;
 }

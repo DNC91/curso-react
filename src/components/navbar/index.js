@@ -2,9 +2,9 @@ import React from "react";
 import "./navbar.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "../home";
-import Componente from "../cards";
+import Cards from "../cards";
 
-const Navbar = props => {
+const Navbar = () => {
     return (
         <Router>
             <div className="header">
@@ -14,7 +14,7 @@ const Navbar = props => {
                 <Link className="navbar__element" to="/contact">
                     Contacto
                 </Link>
-                <Link className="navbar__element" to="/tasklist">
+                <Link className="navbar__element" to="/rmcharacters">
                     Lista de personajes
                 </Link>
             </div>
@@ -23,16 +23,7 @@ const Navbar = props => {
 
                 <Route exact path="/contact" element={<h1>Contacto</h1>} />
 
-                <Route
-                    exact
-                    path="/tasklist"
-                    element={
-                        <Componente
-                            setPosts={props.setPosts}
-                            posts={props.posts}
-                        />
-                    }
-                ></Route>
+                <Route exact path="/rmcharacters" element={<Cards />}></Route>
             </Routes>
         </Router>
     );
